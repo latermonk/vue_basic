@@ -8,24 +8,42 @@
 <body>
 
 <h1>Hello </h1>
-<h15>Hello </h15>
+<h15>Hello2</h15>
+
+
+<!--<div id="root">-->
+<!--    <h1>Hello, {{school}}</h1>-->
+<!--</div>-->
+
+<div id="abc">
+    <h1>Hi , {{school.name}}</h1>
+
+</div>
 
 
 <div id="root">
-    <h1>Hello, {{school}}</h1>
+    <h1>Hi , {{school.name}}</h1>
+    <h1>Hi , {{school.addd}}</h1>
+
+    <h1>HI , {{// bus.color}}</h1>
+
 </div>
 
 
 <script type="text/javascript">
-    const v = new Vue(
+    new Vue(
         {
-            el:'#root',
-            data:{
-                school:'Guigu123'
+            el: '#root',
+            data: {
+                school: {
+                    name: "atguigu",
+                    addd: "china"
+                }
             }
         }
     )
 </script>
+
 
 </body>
 </html>
