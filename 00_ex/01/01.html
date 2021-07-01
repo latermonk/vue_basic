@@ -3,8 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
 </head>
 <body>
+
+<h1>Hello </h1>
+<h15>Hello </h15>
+
+
+<div id="root">
+    <h1>Hello, {{school}}</h1>
+</div>
+
+
+<script type="text/javascript">
+    const v =new Vue(
+        {
+            el:'#root',
+            data:{
+                school:'Guigu123'
+            }
+        }
+    )
+</script>
 
 </body>
 </html>
