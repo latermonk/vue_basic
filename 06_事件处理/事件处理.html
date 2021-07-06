@@ -17,10 +17,12 @@
 			<h2>欢迎来到{{school}}学习</h2>
 
 			<!-- 绑定事件---标准方式 -->
+<!--			<button v-on:click="show0">点我提示：信息1（v-on绑定）</button> <br/><br/>-->
 			<button v-on:click="show1">点我提示：信息1（v-on绑定）</button> <br/><br/>
 
 			<!-- 绑定事件---简写方式 -->
 			<button @click="show1">点我提示：信息1（@绑定）</button> <br/><br/>
+
 
 			<!-- 绑定事件---传递参数 -->
 			<button @click="show2($event,666)">点我提示：信息2 + 传递的参数</button> <br/><br/>
@@ -49,33 +51,55 @@
 				data:{ //配置数据
 					school:'尚硅谷',
 				},
-				methods:{ //用于配置方法
-					show1(event){ //此处的show1一定一定不要写成箭头函数，否则this就是Window了
-						//console.log(this) //this是vm
-						//console.log('信息1',event.target.innerText)
-						alert('信息1')
+
+				// methods:{ //用于配置方法
+				// 	show1(event){ //此处的show1一定一定不要写成箭头函数，否则this就是Window了
+				// 		//console.log(this) //this是vm
+				// 		//console.log('信息1',event.target.innerText)
+				// 		alert('信息1')
+				// 	},
+				// 	show2(event,number){
+				// 		console.log(event)
+				// 		alert('信息2---'+number)
+				// 	},
+				// 	show3(event){
+				// 		//event.preventDefault(); //靠程序员手动阻止默认行为
+				// 		alert('信息3')
+				// 	},
+				// 	show4(event){
+				// 		// event.stopPropagation(); //靠程序员手动阻止冒泡
+				// 		alert('信息4')
+				// 	},
+				// 	show5(event){
+				// 		// if(event.keyCode !== 13) return //靠程序员自己判断按键
+				// 		// console.log(event.keyCode) //输出按键编码值
+				// 		// console.log(event.key) //输出按键名称
+				// 		alert(event.target.value)
+				// 	}
+				// }
+
+				methods:{
+					show1(){
+						console.log('我是信息1')
 					},
-					show2(event,number){
-						console.log(event)
-						alert('信息2---'+number)
+					show2(){
+						console.log('我是信息2')
 					},
-					show3(event){
-						//event.preventDefault(); //靠程序员手动阻止默认行为
-						alert('信息3')
+					show3(){
+						console.log('我是信息3')
 					},
-					show4(event){
-						// event.stopPropagation(); //靠程序员手动阻止冒泡
-						alert('信息4')
+					show4(){
+						console.log('我是信息4')
 					},
-					show5(event){
-						// if(event.keyCode !== 13) return //靠程序员自己判断按键
-						// console.log(event.keyCode) //输出按键编码值
-						// console.log(event.key) //输出按键名称
-						alert(event.target.value) 
+					show5(){
+						console.log('我是信息5')
 					}
-				}
+				},
 			})
 
+			// function show0(){
+			// 	console.log(1)
+			// }
 		</script>
 	</body>
 </html>
