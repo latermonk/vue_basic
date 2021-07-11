@@ -6,6 +6,7 @@
 	</div>
 </template>
 
+
 /* 配置组件数据、交互、事件等等*/
 <script>
 	//引入School组件
